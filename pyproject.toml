@@ -1,0 +1,10 @@
+# pyproject.toml
+# 사용하고 있는 시스템과 build에 필요한 정보들을 담은 파일.
+# pyproject.toml 파일이 존재하지 않는 경우 classic setuptools build system으로 간주한다.
+[build-system]
+# requires는 이 패키지를 빌드하는데 필요한 패키지 리스트를 제공한다.
+requires = [
+    "setuptools>=42",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"

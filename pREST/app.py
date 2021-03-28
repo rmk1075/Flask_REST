@@ -1,6 +1,5 @@
 from flask import Flask
 
-from pREST import __init__
 from pREST.rest import room
 from pREST.settings import DevConfig
 
