@@ -1,6 +1,6 @@
 import json
 
-from flask import Blueprint, Response, request
+from flask import Blueprint, Response, request, session
 
 from pREST.repository import memrepo as mr
 # from pREST.repository import mongorepo as mr
@@ -32,6 +32,13 @@ connection_data = {
 def room():
     for item in request.args.items():
         print(item)
+
+    # session check - session['val']의 값을 1씩 더해서 session 유지되는지 확인
+    if 'val' in session.keys():
+        print(session['val'])
+        session['val'] += 1
+    else:
+        session['val'] = 0
 
     qrystr_params = {
         "filters": {},
